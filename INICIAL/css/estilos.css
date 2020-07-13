@@ -1,3 +1,10 @@
+html {   /* apply a natural box layout model to all elements, but allowing components to change BOX-SIZING de PAUL IRISH*/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 html {
     height: 100%;
 }
@@ -23,6 +30,10 @@ header {
      padding-left: 0;
 }
 
+img {
+    max-width: 100%; /* hace todas las imagenes, de la pagina, responsivas */
+}
+
 .contenedor {
     max-width: 1200px;
     margin: 0  auto;
@@ -39,4 +50,31 @@ h2 {
 
 .lista-productos {
     margin-top: 40px;
+    padding: 0;
+    list-style: none;  /*borra los puntos de las listas, las viñetas */
 }
+
+.lista-productos li {  /* muestra dos productos cuando es menor a 768px */
+    float: left;
+    width: 50%;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+@media (min-width:768px){  /* muestra 3 productos cuando es mayor a 768px */
+    .lista-productos li {
+        width: 33.3%;
+    }
+}
+
+.lista-productos li img {
+    border: 10px solid rgba(255, 87, 51, .45);
+    transition: border-color .3s ease-in-out;
+}
+
+.lista-productos li img:hover {
+    border: 10px solid rgba(255, 87, 51, 1);
+}
+
