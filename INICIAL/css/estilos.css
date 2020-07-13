@@ -62,9 +62,19 @@ h2 {
     padding-left: 20px;
 }
 
+.lista-productos li:nth-child(2n+1) {  /* 2n + 1  significa  2(0)+1 = 1  o  2(1)+1 = 3 */
+    clear: both;    /* no permite que ningun elemento se coloque al lado  mio, lo envia debajo */
+}
+
 @media (min-width:768px){  /* muestra 3 productos cuando es mayor a 768px */
     .lista-productos li {
         width: 33.3%;
+    }
+    .lista-productos li:nth-child(2n+1) {  /* 2n + 1  significa  2(0)+1 = 1  o  2(1)+1 = 3 */
+        clear: unset;    /* este unset borra el both de arriba, el que hereda */
+    }
+    .lista-productos li:nth-child(3n+1) {  /* 3n + 1  significa  3(0)+1 = 1  o  3(1)+1 = 4 */
+        clear: both;    /* no permite que ningun elemento se coloque al lado  mio, lo envia debajo */
     }
 }
 
