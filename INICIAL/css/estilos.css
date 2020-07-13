@@ -49,7 +49,6 @@ h2 {
 }
 
 .lista-productos {
-    margin-top: 40px;
     padding: 0;
     list-style: none;  /*borra los puntos de las listas, las viñetas */
 }
@@ -78,3 +77,35 @@ h2 {
     border: 10px solid rgba(255, 87, 51, 1);
 }
 
+.lista-productos li p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+span.precio {
+    color: chocolate;
+    font-size: 40px;
+}
+
+.boton {
+    background-color: darkorange;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    margin-top: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color .3s  ease-in-out;
+}
+
+.boton:hover {
+    background-color: chocolate;
+}
